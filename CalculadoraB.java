@@ -33,8 +33,12 @@ public class CalculadoraB {
               System.out.println("{2) Restar"); 
               System.out.println("{3) Multiplicar"); 
               System.out.println("{4) Dividir"); 
-              System.out.println("{5) MostrarHistorial");
-              System.out.println("{6) Salir");
+              System.out.println("{5) Raiz"); 
+              System.out.println("{6) Potencia"); 
+              System.out.println("{7) Redondear"); 
+              System.out.println("{8) NumeroAleatorio"); 
+              System.out.println("{9) MostrarHistorial");
+              System.out.println("{10) Salir");
               
               
               System.out.println("Ingrese la opcion que desea usar: ");
@@ -93,61 +97,63 @@ public class CalculadoraB {
                      
                  break;
                  
+                 
                  case 5:
+                
+                     
+                     System.out.println("Ingrese el numero que desea sacarle raiz cuadrada: ");
+                     primerNumero = sc.nextDouble();
+                     System.out.println(calculadoraB.raizBA(primerNumero) );
+                     System.out.println("El resultado de la raiz es:  "+calculadoraB.raiz);
+                 
+                 break;
+
+                 case 6:
+                     
+                      System.out.println("Ingrese el Primer Numero: ");
+                      int primerNumeroB = sc.nextInt();
+         
+                      System.out.println("Ingrese el Segundo Numero: ");
+                      int segundoNumeroB = sc.nextInt();
+                      System.out.println(calculadoraB.potenciaBA(primerNumeroB, segundoNumeroB));
+                      System.out.println("El resultado de la potencia es:  "+calculadoraB.potencia);
+                     
+                     
+                 break;
+                
+                 case 7:
+                        System.out.println("Ingrese un Numero: ");
+                        primerNumero = sc.nextDouble();
+                        
+                        System.out.println(calculadoraB.redondearBA(primerNumero));
+                        System.out.println("El redondeo de la aproximacion es de:  "+calculadoraB.redondear);
+          
+                     
+                 break;
+                 
+                case 8:
+                      
+                      System.out.println(calculadoraB.numeroAleatorioBA());
+                      System.out.println("El numero creado al azar fue:  "+calculadoraB.numeroAleatorio);
+                     
+                 break;
+                 
+                  case 9:
         
                        calculadoraB.mostrarTransacciones();
            
                  break;
                  
-                  case 6:
+                case 10:
           
                  break;
               }
          
-         }while(opcion!=6);        
+         }while(opcion!=10);        
     
          System.out.println("El programa a finalizado");
     }
 }
- 
-
-//case 1:
-                 //System.out.println("Ingrese el numero que desea sacarle raiz cuadrada: ");
-                 //double primerNumero = sc.nextDouble();
-                  //System.out.println(calculadoraB.raizBA(primerNumero) );
-                  //System.out.println("El resultado de la raiz es:  "+calculadoraB.raiz);
-                 
-                 //break;
-
-                 //case 2:
-                     
-                      //System.out.println("Ingrese el Primer Numero: ");
-                      //int primerNumeroB = sc.nextInt();
-         
-                      //System.out.println("Ingrese el Segundo Numero: ");
-                      //int segundoNumeroB = sc.nextInt();
-                      //System.out.println(calculadoraB.potenciaBA(primerNumeroB, segundoNumeroB));
-                      //System.out.println("El resultado de la potencia es:  "+calculadoraB.potencia);
-                     
-                     
-                 //break;
-                
-                 //case 3:
-                        //System.out.println("Ingrese un Numero: ");
-                        //primerNumero = sc.nextDouble();
-                        
-                        //System.out.println(calculadoraB.redondearBA(primerNumero));
-                        //System.out.println("El redondeo de la aproximacion es de:  "+calculadoraB.redondear);
-          
-                     
-                 //break;
-                 
-                //case 4:
-                      
-                      //System.out.println(calculadoraB.numeroAleatorioBA());
-                      //System.out.println("El numero creado al azar fue:  "+calculadoraB.numeroAleatorio);
-                     
-                 //break;
 
 
     
