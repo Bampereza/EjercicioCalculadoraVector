@@ -62,12 +62,15 @@ public class CalculadoraBA extends CalculadoraEspecialBA{
     }
     //METODOS AGREGADOS POR SERVICIO BA
     public double raizBA(double primerNumero){
+      this.registrarTransaccion2("raiz", primerNumero, (double)Math.sqrt (primerNumero) );
       return raiz =(double)Math.sqrt (primerNumero);   
     }
     public int potenciaBA(int primerNumeroB, int segundoNumeroB){
+        this.registrarTransaccion("Potencia", primerNumeroB, segundoNumeroB, (int) Math.pow (primerNumeroB, segundoNumeroB) );
         return potencia = (int) Math.pow (primerNumeroB, segundoNumeroB);
     }
     public double redondearBA(double primerNumero){
+         this.registrarTransaccion2("redondear", primerNumero, (long) Math.round (primerNumero) );
          return redondear = (long) Math.round (primerNumero);
     }
      public double numeroAleatorioBA(){
@@ -103,6 +106,11 @@ public class CalculadoraBA extends CalculadoraEspecialBA{
     
     //Arreglos agregados
     
+    public void registrarTransaccion2(String tipo, double primerParametro, double resultado){
+      indiceVector=indiceVector+1;
+      vectorTransacciones[indiceVector]= primerParametro+""+ tipo+""+" resultado: "+resultado;
+        
+    }
      public void registrarTransaccion(String tipo, double primerParametro, double segundoParametro, double resultado){
       indiceVector=indiceVector+1;
       vectorTransacciones[indiceVector]= primerParametro+""+ tipo+""+segundoParametro+" resultado: "+resultado;
@@ -132,6 +140,8 @@ public class CalculadoraBA extends CalculadoraEspecialBA{
             if(this.vector[i]!=0){
                 System.out.println(vector[i]);
     }
+            
+            
 }
 }
 }
